@@ -1,0 +1,114 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{article}
+\usepackage{fontspec} 
+\usepackage{enumitem}
+\usepackage{multicol}
+\setlist{nosep}
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textwidth=6.75in, textheight=8.5in, marginparsep=1pt, marginparwidth=.6in, top=2cm, bottom=1cm}
+\setlength\parindent{0in}
+\pagenumbering{gobble}
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setmonofont[Scale=0.8]{Monaco} 
+\setsansfont[Scale=0.9]{Optima Regular} 
+% ---- CUSTOM AMPERSAND
+\newcommand{\amper}{{\fontspec[Scale=.90]{Hoefler Text}\selectfont\itshape\&}}
+\renewcommand{\familydefault}{\sfdefault}
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\sffamily\mdseries\LARGE} 
+\subsectionfont{\sffamily\mdseries\normalsize} 
+\subsubsectionfont{\sffamily\bfseries\normalsize} 
+\usepackage[compact]{titlesec}
+\titlespacing{\section}{0cm}{2mm}{.1pc}
+\titlespacing{\subsection}{0cm}{1mm}{*0}
+\titlespacing{\subsubsection}{1mm}{*0}{*0}
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdftitle={Julius Park Resume},pdfauthor={Julius Park }]{hyperref}  
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue} 
+
+% DOCUMENT
+\begin{document}
+\textsf{\Huge Julius Park}\hspace{4mm}484-995-1301 | \href{mailto:juliusgeo@gmail.com}{juliusgeo@gmail.com} | \href{github.com/juliusgeo}{github.com/juliusgeo}
+\section*{Education}
+\noindent Candidate for \textsc{BSc} in Computer Engineering, Drexel University, \textsc{GPA: 3.64,} \textit{2016-2021}
+
+\vspace{-1mm}
+\section*{Skills}
+\textbf{Languages} Python, C\#, C++, Julia, Swift, MATLAB, VHDL\\ 
+\textbf{Technologies} Git, Perforce, Visual Studio, Tensorflow, NumPy, Pandas, bash, zsh, Jira, Docker, .NET, QGIS
+\section*{Experience}
+\textbf{\emph{Software Engineering Intern}, MongoDB, San Francisco}, \textit{June 2020--Aug. 2020}
+\begin{itemize}
+	\item Led development of a standalone Python package for debugging and profiling code that utilizes MongoDB's Python driver
+	\item Employed monkey-patching to develop command line interface for debugging existing Python scripts
+	\item Integrated multiple testing methods into software package including unit testing and specification testing
+	\item Contributed multiple features and bug fixes to official MongoDB Python driver which has over 6 million downloads a month, in addition to the official NumPy integration package
+     \end{itemize}
+\vspace{1mm}
+\textbf{\emph{Software Engineer}, Analytical Graphics Inc., Exton}, \textit{Apr. 2019--Sep. 2019}
+\begin{itemize}
+	\item Worked on Scalability team primarily developing Software Tool Kit, AGI's flagship aerospace simulation software, focusing on parallel processing and supporting macro scripting engines
+     \item Led migration of STK's ~3mil LOC code base to comply with C++20 standard and remove deprecated code, including validation of pre-processor tags to ensure deprecated code is not added in the future
+     \item Changed third-party libraries and their build scripts to remove dependence on boost::filesystem as part of effort to switch over to std::filesystem
+     \item Developed testing framework for various parallel processing features including binary save and load and parallel volumetric calculation
+     \item Led creation of plugin to graphically visualize dependencies between STK objects using MSAGL
+     \end{itemize}
+\vspace{1mm}
+\textbf{\emph{Software Engineer}, Drexel University CCI, Philadelphia}, \textit{Apr. 2018--Mar. 2019}
+\begin{itemize}
+     \item Led development of application using C\# to interface with a medical device designed for physical therapists
+     \item Designed data models, coded vast majority (99\% of commits) from start of project to release
+     \item Built interface including live visualization of data from medical device, and export of data in compliance with HIPAA
+     \item Used multithreading to enhance performance and allow real-time plotting of data over Bluetooth serial connection
+     \end{itemize}
+\vspace{1mm}
+\textbf{\emph{Software Engineer}, Drexel University, Philadelphia}, \textit{Feb. 2017--Apr. 2018} 
+\begin{itemize}
+ \item Utilized Python and NumPy, Python Imaging Library, Cython, and OpenCV to create custom algorithm to quantify architectural changes in images
+     \item Wrote image comparison software for research project NSF \#1562515
+     \item Collaborated with faculty at both Drexel and UT Austin
+     \end{itemize}
+\vspace{0mm}
+
+\section*{Extracurricular \& Personal Projects}
+\textbf{OpenStreetMapPlotter.jl}
+\begin{itemize} 
+     \item Developed a package for Julia to parse, display, and export maps in OpenStreetMap format
+     \item Integrated with Overpass API to allow easy access to map data and developed MapCSS parser to allow custom theming of resulting map plots from CSS files
+     \item Package was accepted into official Julia package manager
+     \end{itemize}
+          \vspace{1mm}
+\textbf{BikingElevationMap}
+\begin{itemize} 
+     \item Developed Python code using GeoPandas to generate custom elevation maps from OpenStreetMap data and export resulting geometry to .shp or .geojson format
+     \item Used QGIS to style resulting files and create finished maps
+     \end{itemize}
+     \vspace{1mm}
+\textbf{DART Robotics Team} \textit{2018}
+\begin{itemize} 
+     \item Lead for image processing on MATE aquatic robotics team
+     \item Using OpenCV to process images from aquatic robot, including object detection and OCR
+     \end{itemize}
+ \vspace{1mm}
+  
+\end{document}
